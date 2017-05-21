@@ -7,8 +7,6 @@ namespace NSTestWebservice1.Models
 {
     public class FetchData
     {
-
-
         public string Username { get; set; }
     }
 }
