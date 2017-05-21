@@ -1,0 +1,21 @@
+﻿USE [temp01DB]
+GO
+
+/****** Object:  Table [dbo].[User_tb]    Script Date: 5/21/2017 10:57:29 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[User_tb](
+	[UserId] [int] IDENTITY(1,1) NOT NULL,
+	[Username] [nchar](100) NULL,
+	[Address] [nchar](100) NULL,
+	[Email] [nchar](100) NULL,
+	[Age] [nchar](10) NULL
+) ON [PRIMARY]
+
+GO
+
+
