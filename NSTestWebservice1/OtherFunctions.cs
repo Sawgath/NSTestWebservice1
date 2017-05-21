@@ -38,7 +38,7 @@ namespace NSTestWebservice1
 
 
 
-            SqlConnection sqlConnection1 = new SqlConnection("Data Source=JAHAN;Initial Catalog=temp01DB;Integrated Security=True");
+            SqlConnection sqlConnection1 = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=temp01DB;Integrated Security=True");
             SqlCommand cmd = new SqlCommand();
             //SqlDataReader reader;
 

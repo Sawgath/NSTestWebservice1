@@ -17,7 +17,7 @@ namespace NSTestWebservice1.Controllers
         public List<User> Post(FetchData afUser)
         {
 
-
+            //asdfasdf
             //{"Username":"asdgajlu' or '1'='1"}
             OtherFunctions aother = new OtherFunctions();
 
