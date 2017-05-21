@@ -13,7 +13,6 @@ namespace NSTestWebservice1
 
         public void Save(User aUser)
         {
-
             //CusConnection
             SqlConnection sqlConnection1 =
                 new SqlConnection("Data Source=JAHAN;Initial Catalog=temp01DB;Integrated Security=True");
@@ -26,26 +25,16 @@ namespace NSTestWebservice1
             sqlConnection1.Open();
             cmd.ExecuteNonQuery();
             sqlConnection1.Close();
-
-
-
-            
-
         }
 
         public List<User> GetAll(string aUser)
         {
-
-
-
             SqlConnection sqlConnection1 = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=temp01DB;Integrated Security=True");
             SqlCommand cmd = new SqlCommand();
-            //SqlDataReader reader;
-
-            cmd.CommandText = "SELECT * FROM [temp01DB].[dbo].[User_tb] where [Username] = '"+aUser+"'";
+            cmd.CommandText = "SELECT * FROM [temp01DB].[dbo].[User_tb] where [Username] = @auser";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = sqlConnection1;
-
+            cmd.Parameters.AddWithValue("@auser", aUser);
             sqlConnection1.Open();
             List<User> userlist = new List<User>();
 
@@ -59,10 +48,6 @@ namespace NSTestWebservice1
                         aUserData.Email = reader["Email"].ToString();
                         aUserData.Age = reader["Age"].ToString();
                         userlist.Add(aUserData);
-
-                    //abc = abc+"-> "+ Convert.ToString(reader["Username"])+"--"+ Convert.ToString(reader["Address"])+" \n";
-                    
-                    
                 }
             }
             
