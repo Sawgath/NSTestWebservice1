@@ -65,7 +65,7 @@ namespace NSTestWebservice1
 
 
 
-        public List<User> unsafeGetAll(string aUser)
+        public IList<User> unsafeGetAll(string aUser)
         {
 
 
